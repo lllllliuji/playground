@@ -17,6 +17,7 @@
 #include "complex.h"
 #include "friend.h"
 #include "strvec.h"
+#include "base.h"
 
 template <typename T>
 int compare(const T& v1, const T& v2) {
