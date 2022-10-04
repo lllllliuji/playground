@@ -1,6 +1,6 @@
 #include "test.h"
 
 int main() {
-    base_test();
+    derived_test();
     return 0;
 }

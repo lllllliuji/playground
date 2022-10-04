@@ -14,6 +14,7 @@
 #include <future>
 #include <tuple>
 #include <list>
+#include <unordered_map>
 #include "complex.h"
 #include "friend.h"
 #include "strvec.h"

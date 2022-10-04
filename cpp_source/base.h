@@ -49,7 +49,16 @@ std::unique_ptr<base> add(std::unique_ptr<base> t1, std::unique_ptr<base> t2) {
     }
     return ret;
 }
-
+class derived : public base {
+   public:
+    void dhello() { std::cout << "hello" << std::endl; }
+    derived(int r, int c): base(r, c) {}
+};
+void derived_test() {
+    std::unique_ptr<base> ptr = std::make_unique<derived>(3, 3);
+    auto dptr = dynamic_cast<derived*> (ptr.get());
+    dptr->dhello();
+}
 void base_test() {
     auto ptr = std::make_unique<base>(5, 5);
     ptr->print();
